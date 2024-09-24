@@ -4,6 +4,9 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Signup } from './pages/Signup'
 import { Login } from './pages/Login'
+import { Profile } from './pages/Profile'
+import { Dashboard } from './pages/Profile/Dashboard'
+import { Settings } from './pages/Profile/Dashboard/Settings'
 
 const routes = createBrowserRouter([
   {
@@ -13,7 +16,22 @@ const routes = createBrowserRouter([
   {
     path: '/login',
     element: <Login />
+  },
+  {
+    path: 'profile',
+    element: <Profile />,
+    children: [
+      {
+        path: '',
+        element: <Dashboard />
+      },
+      {
+        path: 'settings',
+        element: <Settings />
+      }
+    ]
   }
+
 ])
 
 createRoot(document.getElementById('root')!).render(

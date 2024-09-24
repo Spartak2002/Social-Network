@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
     MDBContainer,
     MDBCard,
@@ -75,12 +75,13 @@ export function Signup() {
                                     wrapperClass='mb-4'
                                     label='Password'
                                     type='password'
-                                    {...register('password', { required: 'Password is required',
+                                    {...register('password', {
+                                        required: 'Password is required',
                                         minLength: {
                                             value: 6,
                                             message: 'Password must be at least 6 characters long',
                                         }
-                                     })}
+                                    })}
                                 />
                                 {errors.password && <p className='text-danger'>{errors.password.message}</p>}
                                 <button type='submit' className='btn btn-outline-info' >Submit</button>
