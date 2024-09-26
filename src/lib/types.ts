@@ -27,3 +27,13 @@ export interface IContextType {
     account: IWideUser
     setAccount: (user: IWideUser) => void
 }
+
+export interface IChangePassword  {
+    old: string
+    newpwd: string
+}
+
+export interface IChangeLogin {
+    password: string
+    login: string
+}

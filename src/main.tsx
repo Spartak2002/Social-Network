@@ -6,7 +6,7 @@ import { Signup } from './pages/Signup'
 import { Login } from './pages/Login'
 import { Profile } from './pages/Profile'
 import { Dashboard } from './pages/Profile/Dashboard'
-import { Settings } from './pages/Profile/Dashboard/Settings'
+import { Settings } from './pages/Profile/Settings/indexx'
 
 const routes = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const routes = createBrowserRouter([
         element: <Dashboard />
       },
       {
-        path: 'settings',
+        path: 'profile/settings',
         element: <Settings />
       }
     ]

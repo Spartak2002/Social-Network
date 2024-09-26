@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react"
-import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom"
+import {  Outlet, useNavigate } from "react-router-dom"
 import { handleLogout, handleVerify } from "../../lib/api"
 import { IWideUser } from "../../lib/types"
+import { OwnNavLink } from "../../NavLink"
 
 export const Profile = () => {
-    // const location = useLocation()
-    // console.log(location);
 
     const [account, setAccount] = useState<IWideUser | null>(null)
     const navigate = useNavigate();
@@ -35,12 +34,12 @@ export const Profile = () => {
 
     return account && <>
         <nav>
-            <NavLink to='/profile' end>Profile </NavLink>
-            <NavLink to='profile/settings'>Settings </NavLink>
-            <NavLink to='profile/search'>Search </NavLink>
-            <NavLink to='profile/posts'>Posts </NavLink>
-            <NavLink to='profile/followers'>Followers </NavLink>
-            <NavLink to='profile/followings'>Followings </NavLink>
+            <OwnNavLink to='/profile' end>Profile </OwnNavLink>
+            <OwnNavLink to='profile/settings'>Settings </OwnNavLink>
+            <OwnNavLink to='profile/search'>Search </OwnNavLink>
+            <OwnNavLink to='profile/posts'>Posts </OwnNavLink>
+            <OwnNavLink to='profile/followers'>Followers </OwnNavLink>
+            <OwnNavLink to='profile/followings'>Followings </OwnNavLink>
             <button onClick={onSubmit}>Logout</button>
         </nav>
 
