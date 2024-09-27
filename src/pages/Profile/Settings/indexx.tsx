@@ -10,9 +10,9 @@ export const Settings = () => {
     const [serverError, setServerError] = useState<string | null>(null)
     const [showPasswordForm, setShowPasswordForm] = useState(false)
     const [showLoginForm, setShowLoginForm] = useState(false)
+    serverError
 
-
-    const onClick = () => {
+    const handleClick = () => {
         setShowPasswordForm(!showPasswordForm)
     }
 
@@ -49,7 +49,7 @@ export const Settings = () => {
     return (
         <>
             <h1>Settings</h1>
-            <button onClick={onClick}>Change Password</button>
+            <button onClick={handleClick}>Change Password</button>
             {showPasswordForm && (
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">

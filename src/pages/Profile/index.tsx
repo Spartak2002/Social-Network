@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import {  Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
 import { handleLogout, handleVerify } from "../../lib/api"
 import { IWideUser } from "../../lib/types"
 import { OwnNavLink } from "../../NavLink"

@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
     MDBContainer,
     MDBCard,
@@ -65,7 +64,7 @@ export function Login() {
                                 {errors.password && <p style={{ color: 'red' }}>{errors.password.message}</p>}
 
                                 <button type='submit' className='btn btn-outline-info' >Submit</button>
-                                
+
                             </form>
                         </MDBCardBody>
                     </MDBCard>

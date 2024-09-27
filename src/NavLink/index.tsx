@@ -15,8 +15,8 @@ export const OwnNavLink = ({ to, activeClassName = 'active', exact = false, end 
     const isActive = exact
         ? pathname === to
         : end
-        ? pathname === to
-        : pathname.startsWith(to)
+            ? pathname === to
+            : pathname.startsWith(to)
 
     const className = isActive ? activeClassName : ''
 
