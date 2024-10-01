@@ -8,10 +8,10 @@ import {
     MDBInput,
 }
     from 'mdb-react-ui-kit';
-import { Link, useNavigate } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { InputUser } from '../../lib/types';
-import { handleLogin } from '../../lib/api';
+import { Link, useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import { InputUser } from '../../lib/types'
+import { handleLogin } from '../../lib/api'
 
 export function Login() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<InputUser>()
@@ -73,5 +73,5 @@ export function Login() {
             </MDBRow>
 
         </MDBContainer>
-    );
+    )
 }

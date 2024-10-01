@@ -37,3 +37,19 @@ export interface IChangeLogin {
     password: string
     login: string
 }
+
+export interface IPost {
+    id: number
+    title: string
+    picture: string
+}
+
+export interface IStatus {
+    isPrivate: boolean
+}
+
+export interface IAccount extends IUser {
+    followers: IUser[]
+    following: IUser[]
+    posts: IPost[]
+}

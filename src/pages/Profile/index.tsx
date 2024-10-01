@@ -35,8 +35,8 @@ export const Profile = () => {
     return account && <>
         <nav>
             <OwnNavLink to='/profile' end>Profile </OwnNavLink>
-            <OwnNavLink to='profile/settings'>Settings </OwnNavLink>
-            <OwnNavLink to='profile/search'>Search </OwnNavLink>
+            <OwnNavLink to='profile/settings' end>Settings </OwnNavLink>
+            <OwnNavLink to='profile/search' end>Search </OwnNavLink>
             <OwnNavLink to='profile/posts'>Posts </OwnNavLink>
             <OwnNavLink to='profile/followers'>Followers </OwnNavLink>
             <OwnNavLink to='profile/followings'>Followings </OwnNavLink>
